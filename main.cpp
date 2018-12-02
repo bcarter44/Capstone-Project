@@ -178,9 +178,7 @@ int main()
                 pastWeight = currentWeight;
                 counter++;
                 time_t start = time(0);
-                
                 }
-            
             diff = pastWeight - currentWeight;
             pc.printf("diff: %0.1f\n\r" , diff);
             if(diff < 0.2)
