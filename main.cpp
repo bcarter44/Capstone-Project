@@ -172,7 +172,7 @@ int main()
             time_t start = time(0);
             Run = ON;
             currentWeight = weightCalc();
-            pc.printf("Weight: %0.3f\n\r", currentWeight);
+            pc.printf("Weight: %0.3f Pounds\n\r", currentWeight);
             if (currentWeight > 0 && counter != 1) 
                 {
                 pastWeight = currentWeight;
@@ -184,7 +184,7 @@ int main()
             if(diff < 0.2)
                 {
                 pastWeight = currentWeight;
-                pc.printf("past Weight %0.3f\n\r", pastWeight);
+                pc.printf("past Weight %0.3f Pounds\n\r", pastWeight);
                 }
             else
                 {
