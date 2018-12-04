@@ -140,9 +140,9 @@ int main()
     
         while(Increment == ON)
             {   
+            set++;
             pc.printf("Current weight is %d\n\r" , set);
             wait(0.1);
-            set++;
                 if(set == 6)
                 {
                 set = 1; 
