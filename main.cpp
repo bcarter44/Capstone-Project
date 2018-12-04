@@ -169,22 +169,25 @@ int main()
         while (Go == ON) 
             {
             float diff =0;
-            time_t start = time(0);
             Run = ON;
+            time_t start;
             currentWeight = weightCalc();
-            pc.printf("Weight: %0.3f Pounds\n\r", currentWeight);
-            if (currentWeight > 0 && counter != 1) 
+            pc.printf("Weight: %0.3f\n\r", currentWeight);
+            if (currentWeight >= 0 && counter == 0) 
                 {
                 pastWeight = currentWeight;
                 counter++;
-                time_t start = time(0);
+                start = time(0);
+                pc.printf("In start");
+                
                 }
+            
             diff = pastWeight - currentWeight;
             pc.printf("diff: %0.1f\n\r" , diff);
             if(diff < 0.2)
                 {
                 pastWeight = currentWeight;
-                pc.printf("past Weight %0.3f Pounds\n\r", pastWeight);
+                pc.printf("Past Weight: %0.3f pounds\n\r", pastWeight);
                 }
             else
                 {
@@ -201,7 +204,8 @@ int main()
                 Go = OFF;    
                 }
             double timePast = difftime(time(0), start);
-            if (timePast > 100 && currentWeight == 0)
+            printf("time %0.3f\n\r" , timePast);
+            if (timePast > 30 && currentWeight == 0)
                 {
                 printf("No weight has been added\n\r");
                 Go = OFF;
