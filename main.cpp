@@ -206,7 +206,7 @@ int main()
             printf("time %0.3f\n\r" , timePast);
             if (timePast > 30 && currentWeight == 0)
                 {
-                printf("No weight has been added\n\r");
+                pc.printf("No weight has been added\n\r");
                 Go = OFF;
                 }
             } 
