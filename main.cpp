@@ -172,13 +172,12 @@ int main()
             Run = ON;
             time_t start;
             currentWeight = weightCalc();
-            pc.printf("Weight: %0.3f\n\r", currentWeight);
+            pc.printf("Weight: %0.3f Pounds\n\r", currentWeight);
             if (currentWeight >= 0 && counter == 0) 
                 {
                 pastWeight = currentWeight;
                 counter++;
                 start = time(0);
-                pc.printf("In start");
                 
                 }
             
